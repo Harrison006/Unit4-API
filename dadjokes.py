@@ -5,4 +5,5 @@ for _ in range(10):
         headers={"Accept": "application/json"}, # telling what output from https://icanhazdadjoke.com/ we want
     )
     json_response = response.json()   # asking api for a JSON response
-    print(json_response) # printing response
+    joke = json_response['joke']
+    print(joke) # printing response
