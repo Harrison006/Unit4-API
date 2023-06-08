@@ -38,8 +38,9 @@ plt.bar(djia_monthly_mean_srtd["Month"], height=djia_monthly_mean_srtd["Close"])
 plt.bar(
     djia_monthly_mean_srtd["Month"],
     height=djia_monthly_mean_srtd["Close"],
-    color=["blue", "gray", "gray", "gray", "gray", "gray"],
+    color=["blue", "gray", "red", "green", "green", "gray"],
 )
 
 
 plt.show()
+
