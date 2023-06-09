@@ -10,10 +10,9 @@ djia_data.head()
 z = np.polyfit(djia_data['# Victims Killed'], djia_data['# Victims Killed'], 1)
 p = np.poly1d(z)
 
-
-vitims["shootings"] = djia_data['# Victims Injured'].astype(str) +"-"+ djia_data["# Victims Killed"]
-plt.scatter(djia_data[victims], djia_data["State"], cmap = plt.cm.plasma)
-plt.plot(djia_data["# Victims Killed"], p(djia_data["# Victims Killed"]))
-
-plt.savefig('DJIA 2023 Scatterplot Open vs. Close.png')
+plt.barh(djia_data["State"], height = 0.5, width = djia_data["# Victims Killed"], color = ['grey'])
+#plt.scatter(djia_data["# Victims Killed"], djia_data["State"], cmap = plt.cm.plasma)
+#plt.plot(djia_data["# Victims Killed"], p(djia_data["# Victims Killed"]))
+plt.xticks(range(1, 25))
+plt.savefig('Shootings in US')
 plt.show()
